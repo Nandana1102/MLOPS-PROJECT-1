@@ -87,9 +87,19 @@ def train(data_path: str, model_out: str, experiment_name: str = 'house_price_ex
             input_example = X_train.head(1)
         except Exception:
             input_example = None
-
         if input_example is not None and not input_example.empty:
-            mlflow.sklearn.log_model(grid.best_estimator_, 'model', input_example=input_example)
+            # Convert integer columns to float in the input example to avoid
+            # MLflow schema enforcement warnings about integers with missing values.
+            try:
+                for c in input_example.columns:
+                    if pd.api.types.is_integer_dtype(input_example[c].dtype):
+                        input_example[c] = input_example[c].astype(float)
+            except Exception:
+                # If conversion fails for any reason, fall back to logging without
+                # modified input_example to ensure the run still records.
+                mlflow.sklearn.log_model(grid.best_estimator_, 'model')
+            else:
+                mlflow.sklearn.log_model(grid.best_estimator_, 'model', input_example=input_example)
         else:
             mlflow.sklearn.log_model(grid.best_estimator_, 'model')
 
