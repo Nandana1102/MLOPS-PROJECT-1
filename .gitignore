@@ -1,0 +1,19 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local MLflow runs and artifacts
+mlruns/
+
+# Models and large artifacts
+models/
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
