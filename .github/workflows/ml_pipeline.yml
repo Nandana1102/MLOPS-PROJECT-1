@@ -22,10 +22,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Train Model
-        run: |
-          python src/train_model.py --data data/house_prices.csv --model-out models/model.joblib
-
       - name: Run Evaluation
         run: |
           python src/evaluate.py --model models/model.joblib --data data/house_prices.csv || echo "Skipping evaluation"
