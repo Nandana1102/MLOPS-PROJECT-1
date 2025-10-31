@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/387684818985190370/0ed599b306e5425d9cedbb1260eb4af1/artifacts
+end_time: 1761846523638
+entry_point_name: ''
+experiment_id: '387684818985190370'
+lifecycle_stage: active
+run_id: 0ed599b306e5425d9cedbb1260eb4af1
+run_name: omniscient-ram-388
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761846523552
+status: 4
+tags: []
+user_id: nanda

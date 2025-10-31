@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/759563925728682573/models/m-ce3a33febd0b4cdb8b41edf3ab9afec8/artifacts
+creation_timestamp: 1761896368166
+experiment_id: '759563925728682573'
+last_updated_timestamp: 1761896374806
+model_id: m-ce3a33febd0b4cdb8b41edf3ab9afec8
+model_type: null
+name: model
+source_run_id: 075d7cce06cb46688a11b411aa9dbf79
+status: 2
+status_message: null

@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/333352272392004831/bb25de91c3dd46e6bf423a4698897ef1/artifacts
+end_time: 1761843509677
+entry_point_name: ''
+experiment_id: '333352272392004831'
+lifecycle_stage: active
+run_id: bb25de91c3dd46e6bf423a4698897ef1
+run_name: clumsy-kit-13
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761843506807
+status: 4
+tags: []
+user_id: nanda

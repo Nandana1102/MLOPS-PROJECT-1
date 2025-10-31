@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/333352272392004831/6f2cbf1289f147aa92c0e0f9bce421df/artifacts
+end_time: 1761848172233
+entry_point_name: ''
+experiment_id: '333352272392004831'
+lifecycle_stage: active
+run_id: 6f2cbf1289f147aa92c0e0f9bce421df
+run_name: nebulous-midge-191
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761848165688
+status: 3
+tags: []
+user_id: nanda

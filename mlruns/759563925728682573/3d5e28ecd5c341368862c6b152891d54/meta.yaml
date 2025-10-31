@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/759563925728682573/3d5e28ecd5c341368862c6b152891d54/artifacts
+end_time: 1761894754891
+entry_point_name: ''
+experiment_id: '759563925728682573'
+lifecycle_stage: active
+run_id: 3d5e28ecd5c341368862c6b152891d54
+run_name: receptive-panda-914
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761894744679
+status: 3
+tags: []
+user_id: nanda

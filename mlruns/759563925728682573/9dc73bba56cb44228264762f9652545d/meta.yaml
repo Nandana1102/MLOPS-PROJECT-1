@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/759563925728682573/9dc73bba56cb44228264762f9652545d/artifacts
+end_time: 1761896707317
+entry_point_name: ''
+experiment_id: '759563925728682573'
+lifecycle_stage: active
+run_id: 9dc73bba56cb44228264762f9652545d
+run_name: agreeable-hen-394
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761896706499
+status: 4
+tags: []
+user_id: nanda

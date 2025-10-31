@@ -1,0 +1,20 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "area",
+      "bedrooms",
+      "bathrooms",
+      "stories",
+      "parking"
+    ],
+    "data": [
+      [
+        1400,
+        3,
+        2,
+        2,
+        1
+      ]
+    ]
+  }
+}

@@ -1,12 +1,24 @@
+# Base image
 FROM python:3.10-slim
+
+# Set working directory
 WORKDIR /app
 
-COPY requirements.txt ./
+# Copy dependencies first (for caching)
+COPY requirements.txt .
+
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . /app
+# Copy the rest of the project
+COPY . .
 
-ENV MODEL_PATH=/app/models/model.joblib
-EXPOSE 8080
+# Expose port (Render uses 10000 by default)
+EXPOSE 10000
 
-CMD ["python", "src/app.py"]
+# Set environment variables
+ENV PORT=10000
+ENV MODEL_PATH=models/model.joblib
+
+# Run the Flask app
+CMD ["python", "app/app.py"]

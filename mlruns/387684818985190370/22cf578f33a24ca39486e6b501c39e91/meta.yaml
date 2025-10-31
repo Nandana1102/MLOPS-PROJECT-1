@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/387684818985190370/22cf578f33a24ca39486e6b501c39e91/artifacts
+end_time: 1761848162980
+entry_point_name: ''
+experiment_id: '387684818985190370'
+lifecycle_stage: active
+run_id: 22cf578f33a24ca39486e6b501c39e91
+run_name: calm-lamb-614
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761848159380
+status: 3
+tags: []
+user_id: nanda

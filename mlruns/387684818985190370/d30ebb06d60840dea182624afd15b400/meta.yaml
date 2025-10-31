@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/387684818985190370/d30ebb06d60840dea182624afd15b400/artifacts
+end_time: 1761846682211
+entry_point_name: ''
+experiment_id: '387684818985190370'
+lifecycle_stage: active
+run_id: d30ebb06d60840dea182624afd15b400
+run_name: charming-perch-297
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761846676375
+status: 3
+tags: []
+user_id: nanda

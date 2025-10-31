@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/387684818985190370/fd142fe61e22480bb3502fb776505159/artifacts
+end_time: 1761846637302
+entry_point_name: ''
+experiment_id: '387684818985190370'
+lifecycle_stage: active
+run_id: fd142fe61e22480bb3502fb776505159
+run_name: stylish-foal-317
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761846637149
+status: 4
+tags: []
+user_id: nanda

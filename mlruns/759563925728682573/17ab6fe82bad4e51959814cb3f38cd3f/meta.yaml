@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/759563925728682573/17ab6fe82bad4e51959814cb3f38cd3f/artifacts
+end_time: 1761896776273
+entry_point_name: ''
+experiment_id: '759563925728682573'
+lifecycle_stage: active
+run_id: 17ab6fe82bad4e51959814cb3f38cd3f
+run_name: persistent-squid-870
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761896770597
+status: 3
+tags: []
+user_id: nanda

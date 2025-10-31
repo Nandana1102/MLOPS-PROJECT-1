@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/387684818985190370/9b0dbffd0e5c4167a855f5ed6d5de0a3/artifacts
+end_time: 1761847965658
+entry_point_name: ''
+experiment_id: '387684818985190370'
+lifecycle_stage: active
+run_id: 9b0dbffd0e5c4167a855f5ed6d5de0a3
+run_name: amazing-jay-445
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761847961951
+status: 3
+tags: []
+user_id: nanda

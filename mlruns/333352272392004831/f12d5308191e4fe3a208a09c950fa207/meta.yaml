@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/333352272392004831/f12d5308191e4fe3a208a09c950fa207/artifacts
+end_time: 1761848004855
+entry_point_name: ''
+experiment_id: '333352272392004831'
+lifecycle_stage: active
+run_id: f12d5308191e4fe3a208a09c950fa207
+run_name: orderly-mole-734
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761847998372
+status: 3
+tags: []
+user_id: nanda

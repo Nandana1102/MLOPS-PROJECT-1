@@ -5,11 +5,6 @@ venv/
 __pycache__/
 *.pyc
 
-# Local MLflow runs and artifacts
-mlruns/
-
-# Models and large artifacts
-models/
 
 # Environment files
 .env

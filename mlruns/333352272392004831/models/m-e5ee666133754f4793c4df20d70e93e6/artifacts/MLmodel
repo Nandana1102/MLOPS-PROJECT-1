@@ -1,0 +1,36 @@
+artifact_path: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/333352272392004831/models/m-e5ee666133754f4793c4df20d70e93e6/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+is_signature_from_type_hint: false
+mlflow_version: 3.5.1
+model_id: m-e5ee666133754f4793c4df20d70e93e6
+model_size_bytes: 69484
+model_uuid: m-e5ee666133754f4793c4df20d70e93e6
+prompts: null
+run_id: 6ca336386fc646ff810116065425a31d
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "area", "required": true}, {"type": "long", "name":
+    "bedrooms", "required": true}, {"type": "long", "name": "bathrooms", "required":
+    true}, {"type": "long", "name": "stories", "required": true}, {"type": "long",
+    "name": "parking", "required": true}]'
+  outputs: '[{"type": "double", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-10-30 18:14:09.313976'

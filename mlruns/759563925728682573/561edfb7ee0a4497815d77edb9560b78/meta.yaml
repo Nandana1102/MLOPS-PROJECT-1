@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/759563925728682573/561edfb7ee0a4497815d77edb9560b78/artifacts
+end_time: 1761896667030
+entry_point_name: ''
+experiment_id: '759563925728682573'
+lifecycle_stage: active
+run_id: 561edfb7ee0a4497815d77edb9560b78
+run_name: dashing-wolf-394
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761896666218
+status: 4
+tags: []
+user_id: nanda

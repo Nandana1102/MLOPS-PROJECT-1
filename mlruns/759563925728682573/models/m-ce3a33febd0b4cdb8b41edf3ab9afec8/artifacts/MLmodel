@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/nanda/Downloads/house_price_mlops/mlruns/759563925728682573/models/m-ce3a33febd0b4cdb8b41edf3ab9afec8/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.5.1
+model_id: m-ce3a33febd0b4cdb8b41edf3ab9afec8
+model_size_bytes: 15547867
+model_uuid: m-ce3a33febd0b4cdb8b41edf3ab9afec8
+prompts: null
+run_id: 075d7cce06cb46688a11b411aa9dbf79
+utc_time_created: '2025-10-31 07:39:28.236976'
