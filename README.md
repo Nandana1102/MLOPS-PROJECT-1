@@ -2,6 +2,7 @@
 
 This project demonstrates a small end-to-end MLOps pipeline for a regression task (predicting house prices).
 
+
 ## What you get
 - Automated preprocessing pipeline (scikit-learn ColumnTransformer)
 - Model training with hyperparameter search (GridSearchCV)
