@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>House Price Predictor</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
         body {
             font-family: 'Poppins', sans-serif;
@@ -14,43 +14,66 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            background: linear-gradient(120deg, #74ebd5, #ACB6E5);
-            animation: gradientMove 10s infinite alternate ease-in-out;
-        }
-
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
-        }
-
-        /* Floating house icons */
-        .floating-house {
-            position: absolute;
-            opacity: 0.15;
-            animation: float 10s infinite ease-in-out;
-        }
-
-        .floating-house img {
-            width: 60px;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .container {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 40px 50px;
-            border-radius: 20px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-            text-align: center;
-            z-index: 1;
+            
+            /* --- BACKGROUND IMAGE REPLACEMENT --- */
+            background-image: url('https://cdn.pixabay.com/photo/2020/10/13/13/28/ameland-5651866_1280.jpg'); /* <-- REPLACE THIS URL! */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Keeps the background stable */
+            /* Add a semi-transparent dark overlay for better contrast */
             position: relative;
         }
 
+        /* Overlay to darken/blur the background image */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Adjust opacity for desired darkness */
+            backdrop-filter: blur(3px); /* Optional: add a subtle blur effect */
+            z-index: 0;
+        }
+        
+        /* Floating house icons */
+        .floating-house {
+            position: absolute;
+            opacity: 0.1; /* Reduced opacity for subtlety */
+            animation: float 10s infinite ease-in-out;
+            z-index: 1; /* Keep them above the main background */
+        }
+
+        .floating-house img {
+            width: 70px; /* Slightly larger icons */
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+            33% { transform: translateY(-30px) translateX(15px) rotate(5deg); }
+            66% { transform: translateY(10px) translateX(-10px) rotate(-5deg); }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95); /* High opacity for the form area */
+            padding: 40px 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Stronger shadow to lift it off the background */
+            text-align: center;
+            z-index: 2; /* Ensure it's above the background and floating icons */
+            position: relative;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .container:hover {
+             transform: translateY(-5px); /* Subtle lift on hover */
+             box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+        }
+
         .container img {
-            width: 100px;
+            width: 80px;
             margin-bottom: 15px;
             animation: bounce 2s infinite;
         }
@@ -60,49 +83,68 @@
             50% { transform: translateY(-5px); }
         }
 
+        h2 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            /* Gradient Text for Title */
+            background: linear-gradient(90deg, #007bff, #20c997);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #007bff; /* Fallback */
+            letter-spacing: 0.5px;
+        }
+
         input {
             width: 85%;
-            padding: 10px;
-            margin: 8px 0;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            font-size: 15px;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 16px;
             transition: 0.3s;
         }
 
         input:focus {
             border-color: #007bff;
             outline: none;
-            box-shadow: 0 0 8px rgba(0,123,255,0.3);
+            box-shadow: 0 0 10px rgba(0,123,255,0.4);
+            background-color: #f9f9ff;
         }
 
         button {
             background: #007bff;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
+            padding: 12px 25px;
+            border-radius: 10px;
             cursor: pointer;
-            font-weight: bold;
-            margin: 5px;
+            font-weight: 600;
+            margin: 10px 5px;
             transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0,123,255,0.3);
         }
 
         button:hover {
             background: #0056b3;
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,123,255,0.4);
+        }
+        
+        button:active {
+            transform: translateY(1px); /* 'Press' effect */
+            box-shadow: 0 2px 5px rgba(0,123,255,0.5);
         }
 
-        h2 {
-            margin-bottom: 10px;
-            color: #333;
-        }
 
         .prediction {
-            margin-top: 15px;
-            color: green;
-            font-weight: bold;
+            margin-top: 25px;
+            color: #20c997; /* A vibrant success color */
+            font-weight: 700;
+            font-size: 1.3em;
+            padding: 10px;
+            border-radius: 8px;
             animation: fadeIn 1.5s ease-in-out;
+            position: relative; /* For confetti */
         }
 
         @keyframes fadeIn {
@@ -114,55 +156,135 @@
             display: none;
             color: #007bff;
             font-style: italic;
+            margin-top: 15px;
+            font-size: 1.1em;
         }
+        
+        /* Confetti Effect (CSS only, activated by JS) */
+        .confetti {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .confetti div {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            opacity: 0;
+            transform-origin: 50% 50%;
+            border-radius: 50%; /* Make them circles */
+        }
+        
+        .c1 { background-color: #ff99c8; animation: confetti-fall 3s ease-out 0s forwards; }
+        .c2 { background-color: #a9def9; animation: confetti-fall 3s ease-out 0.2s forwards; }
+        .c3 { background-color: #ede7b1; animation: confetti-fall 3s ease-out 0.4s forwards; }
+
+        @keyframes confetti-fall {
+            0% { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+            100% { opacity: 0; transform: translate(var(--x), var(--y)) rotate(var(--r)); }
+        }
+        
     </style>
 </head>
 <body>
 
-    <!-- Floating background houses -->
     <div class="floating-house" style="top: 20%; left: 10%; animation-delay: 0s;">
         <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="house">
     </div>
-    <div class="floating-house" style="bottom: 15%; right: 15%; animation-delay: 2s;">
+    <div class="floating-house" style="bottom: 15%; right: 15%; animation-delay: 2s; transform: scale(0.8);">
         <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="house">
     </div>
+    <div class="floating-house" style="top: 5%; right: 40%; animation-delay: 4s; transform: scale(1.2);">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="house">
+    </div>
+    <div class="floating-house" style="bottom: 5%; left: 30%; animation-delay: 6s; transform: scale(0.9);">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="house">
+    </div>
+
 
     <div class="container">
         <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="House Icon">
         <h2>🏠 House Price Prediction</h2>
         
         <form id="predictForm" action="/predict" method="post">
-            <input type="number" name="OverallQual" placeholder="Overall Quality (1-10)" required><br>
-            <input type="number" name="GrLivArea" placeholder="Living Area (sq ft)" required><br>
-            <input type="number" name="GarageCars" placeholder="Garage Capacity" required><br>
-            <input type="number" name="TotalBsmtSF" placeholder="Total Basement (sq ft)" required><br>
+            <input type="number" name="OverallQual" placeholder="Overall Quality (Scale of 1-10)" required><br>
+            <input type="number" name="GrLivArea" placeholder="Above Ground Living Area (sq ft)" required><br>
+            <input type="number" name="GarageCars" placeholder="Garage Capacity (Number of cars)" required><br>
+            <input type="number" name="TotalBsmtSF" placeholder="Total Basement Area (sq ft)" required><br>
             <input type="number" name="FullBath" placeholder="Number of Full Bathrooms" required><br>
-            <input type="number" name="YearBuilt" placeholder="Year Built" required><br>
+            <input type="number" name="YearBuilt" placeholder="Year House Was Built" required><br>
             
             <div>
                 <button type="submit">Predict Price</button>
                 <button type="button" onclick="resetForm()">Reset</button>
             </div>
 
-            <div class="loading" id="loading">⏳ Calculating price...</div>
+            <div class="loading" id="loading">⏳ Calculating the predicted price...</div>
         </form>
 
         {% if prediction_text %}
-            <h3 class="prediction">{{ prediction_text }}</h3>
+            <h3 class="prediction" id="predictionResult">
+                {{ prediction_text }}
+                <div class="confetti" id="confetti"></div>
+            </h3>
         {% endif %}
     </div>
 
     <script>
         const form = document.getElementById('predictForm');
         const loading = document.getElementById('loading');
+        const predictionResult = document.getElementById('predictionResult');
+        const confettiContainer = document.getElementById('confetti');
 
         form.addEventListener('submit', () => {
+            // Hide previous prediction text if present
+            if (predictionResult) {
+                predictionResult.style.display = 'none';
+            }
             loading.style.display = 'block';
         });
 
         function resetForm() {
             form.reset();
             loading.style.display = 'none';
+            // Hide prediction text on reset
+            if (predictionResult) {
+                predictionResult.style.display = 'none';
+            }
+        }
+        
+        // --- Confetti Generation (Runs when prediction is loaded) ---
+        // This simulates the confetti effect when the Flask template renders the prediction_text
+        if (predictionResult && '{{ prediction_text }}') {
+             // Function to generate a random number within a range
+            const randomRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+            
+            // Clear any existing confetti
+            confettiContainer.innerHTML = ''; 
+
+            for (let i = 0; i < 25; i++) {
+                const confetto = document.createElement('div');
+                const x = randomRange(-100, 100) + 'px'; // Horizontal displacement
+                const y = randomRange(50, 150) + 'px'; // Vertical displacement (downwards)
+                const r = randomRange(360, 720) + 'deg'; // Rotation
+                const type = 'c' + (i % 3 + 1); // Cycle through the 3 colors
+                
+                confetto.className = type;
+                
+                // Set CSS variables for animation
+                confetto.style.setProperty('--x', x);
+                confetto.style.setProperty('--y', y);
+                confetto.style.setProperty('--r', r);
+                confetto.style.left = '50%';
+                confetto.style.top = '100%';
+                confetto.style.animationDelay = (i * 0.05) + 's';
+
+                confettiContainer.appendChild(confetto);
+            }
         }
     </script>
 
